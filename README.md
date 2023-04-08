@@ -7,4 +7,8 @@ Run the below commands:
 
 >> npm init
 
->> npm i express body-parser mongoose multer 
+>> npm i express body-parser mongoose multer
+
+>> npm i -g nodemon
+
+>> nodemon
