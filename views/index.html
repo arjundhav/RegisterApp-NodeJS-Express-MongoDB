@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Signup Form</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+
+</head>
+
+<body>
+	<br />
+	<br />
+	<br />
+	<div class="container">
+		<div class="row">
+			<section class="vh-100" style="background-color: #d3caca">
+				<div class="container h-100">
+					<div class="row d-flex justify-content-center align-items-center h-100">
+						<div class="col-lg-12 col-xl-11">
+							<div class="card text-black" style="border-radius: 25px">
+								<div class="card-body p-md-5">
+									<div class="row justify-content-center">
+										<div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+											<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Register</p>
+
+											<form class="mx-1 mx-md-4" action="/register" method="post" enctype="multipart/form-data">
+												<div class="d-flex flex-row align-items-center mb-4">					
+													<div class="form-outline flex-fill mb-0">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<label class="form-label" for="form3Example1c">User Name</label>
+														<input type="text" name="name" id="name" placeholder="Name" class="form-control" required />
+													</div>
+												</div>
+
+												<div class="d-flex flex-row align-items-center mb-4">
+													<div class="form-outline flex-fill mb-0">
+														<i class="fas fa-envelope-open fa-lg me-3 fa-fw"></i>
+														<label class="form-label" for="form3Example1c">Email </label>
+														<input type="email" name="email" id="email" placeholder="Email" class="form-control" required />
+													</div>
+												</div>
+
+												<div class="d-flex flex-row align-items-center mb-4">
+													<div class="form-outline flex-fill mb-0">
+														<i class="fas fa-phone fa-lg me-3 fa-fw"></i>
+														<label class="form-label" for="form3Example1c">Contact Number</label>
+														<input type="number" name="phone" id="phone" placeholder="Phone Number" class="form-control" required />
+													</div>
+												</div>
+
+												<!-- profilePIc -->
+												<div class="d-flex flex-row align-items-center mb-4">
+													<div class="form-outline flex-fill mb-0">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<label class="form-label" for="form3Example1c">Profile Picture</label>
+														<input type="file" name="profilePic" id="profilePic" placeholder="Profile Picture" class="form-control" required />
+													</div>
+
+												<div class="d-flex flex-row align-items-center mb-4">
+													<div class="form-outline flex-fill mb-0">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<label class="form-label" for="form3Example1c">Password</label>
+														<input type="password" name="password" id="password" placeholder="Password" class="form-control" required />
+													</div>
+												</div>
+
+												<br>
+
+												<input class="btn-primary" type="submit" id="submitDetails" name="submitDetails"
+													value="Submit" /><br />
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+</body>
+
+
+</html>
