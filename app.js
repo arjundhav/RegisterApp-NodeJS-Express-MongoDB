@@ -1,12 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const multer = require('multer');
 const client = require('prom-client');
 const Register = require('./models/registermodel');
 
 const app = express();
-const port = 3003;
+const port = 3000;
 
 // Database connection
 // mongoose.connect('mongodb://127.0.0.1:27017/Demo', { useNewUrlParser: true, useUnifiedTopology: true })
@@ -17,17 +16,6 @@ const port = 3003;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('views'));
-
-// Multer configuration
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, './public/uploads');
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.originalname);
-    }
-});
-const upload = multer({ storage: storage });
 
 // Prometheus Metrics
 const collectDefaultMetrics = client.collectDefaultMetrics;
@@ -124,12 +112,12 @@ app.get('/', (req, res) => {
     console.log('req.body');
 });
 
-// app.post('/register', upload.single('profilePic'), (req, res) => {
+// app.post('/register', (req, res) => {
 //     const user = new Register({
 //         name: req.body.name,
 //         email: req.body.email,
 //         phone: req.body.phone,
-//         profilePic: req.file.path,
+//         profilePic: req.body.profilePic,
 //         password: req.body.password
 //     });
 //     user.save()
@@ -188,5 +176,5 @@ app.get('/', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-    console.log(App is running on port ${port}!);
+    console.log(`App is running on port ${port}!`);
 });
