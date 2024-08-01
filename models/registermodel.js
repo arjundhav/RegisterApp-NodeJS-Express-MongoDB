@@ -5,7 +5,6 @@ const registerSchema = new mongoose.Schema({
     name: String,
     email: String,
     phone: String,
-    profilePic: String,
     password: String,
 
 });
